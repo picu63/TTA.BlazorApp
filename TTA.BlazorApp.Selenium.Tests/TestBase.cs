@@ -16,13 +16,12 @@ namespace TTA.BlazorApp.Selenium.Tests
         public void InitWebDriver()
         {
             Driver = new ChromeDriver();
-            Wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(5));
+            Wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(10));
         }
 
         [TearDown]
         public void Dispose()
         {
-            Driver.Close();
             Driver?.Dispose();
         }
     }
